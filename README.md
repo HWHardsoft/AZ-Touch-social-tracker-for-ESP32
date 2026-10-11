@@ -3,27 +3,13 @@ ESP32 social media tracker for Facebook, Instagram and Youtube for ArduiTouch ES
 
 ![My image](https://i.pinimg.com/564x/5d/10/40/5d1040267a2923ab269fd2b01193e2ec.jpg)
 
-## Website
+## Introduction
 
-You can find the latest version of the code and the description of the hardware at
-https://www.hwhardsoft.de/english/projects/arduitouch-esp/
+This example for the AZ-Touch MOD(https://www.hwhardsoft.de/english/projects/arduitouch-esp/) or AZ-Touch Feather (e.g., with the Huzzah32 board) shows how to build a small social media follower counter using the AZ-Touch kits. Currently supported platforms include YouTube, TikTok, Threads, Instagram, and Pinterest. To make setup as easy as possible for the user, we have largely avoided using APIs. Instead, we extract the data for YouTube and TikTok by scraping the corresponding websites.
+Instagram and Threads protect their pages against scraping, so we use Honesthook to access the data. 
 
+## Hardware settings
 
-## Libraries
-
-Install the following libraries through Arduino Library Manager
-
-Adafruit GFX Library https://github.com/adafruit/Adafruit-GFX-Library/archive/master.zip 
-Adafruit ILI9341 Library https://github.com/adafruit/Adafruit_ILI9341 
-XPT2046_Touchscreen by Paul Stoffregen https://github.com/PaulStoffregen/XPT2046_Touchscreen/blob/master/XPT2046_Touchscreen.h 
-ArduinoJson by Benoît Blanchon https://github.com/bblanchon/ArduinoJson 
-JsonStreamingParser by Daniel Eichhorn https://github.com/squix78/json-streaming-parser 
-InstagramStats by Brian Lough https://github.com/witnessmenow/arduino-instagram-stats 
-YoutubeAPI by Brian Lough https://github.com/witnessmenow/arduino-youtube-api/
-
-You can also download the library also directly as ZIP file and uncompress the folder under yourarduinosketchfolder/libraries/   
-
-After installing the libraries, restart the Arduino IDE. 
 
 ## WiFi settings
 
