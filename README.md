@@ -5,7 +5,7 @@
 
 ## Introduction
 
-This example for the [AZ-Touch MOD](https://www.hwhardsoft.de/english/projects/arduitouch-esp/) or AZ-Touch Feather (e.g., with the Huzzah32 board) shows how to build a small social media follower counter using the AZ-Touch kits. Currently supported platforms include YouTube, TikTok, Threads, Instagram, and Pinterest. To make setup as easy as possible for the user, we have largely avoided using APIs. Instead, we extract the data for YouTube and TikTok by scraping the corresponding websites.
+This example for the [AZ-Touch MOD](https://www.hwhardsoft.de/english/projects/arduitouch-esp/) or [AZ-Touch Feather](https://www.hwhardsoft.de/english/projects/az-touch-feather/) (e.g., with the Huzzah32 board) shows how to build a small social media follower counter using the AZ-Touch kits. Currently supported platforms include YouTube, TikTok, Threads, Instagram, and Pinterest. To make setup as easy as possible for the user, we have largely avoided using APIs. Instead, we extract the data for YouTube and TikTok by scraping the corresponding websites.
 Instagram and Threads protect their pages against scraping, so we use Honesthook to access the data. 
 
 ## Hardware settings
@@ -20,7 +20,7 @@ First, you must specify in the hardwareconfig.h file which AZ-Touch kit or platf
 
 ## WiFi settings
 
-Enter your WiFi SSID & password in the fields in the WiFi section: 
+Enter your Wi-Fi SSID and password in the fields in the “Wi-Fi” section of credentials.h: 
 ```cpp
 // Wi-Fi
 static const char WIFI_SSID[]     = "";
@@ -29,26 +29,36 @@ static const char WIFI_PASSWORD[] = "";
 
 ## Youtube and Tiktok settings
 
+The data for YouTube and TikTok is obtained by scraping the respective websites. Therefore, you only need to enter the username of the relevant account in credentials.h . Passwords or channel IDs are not required. 
+```cpp
+static const char YOUTUBE_CHANNEL[] = "";
 
+// Public TikTok profile name, without @
+static const char TIKTOK_USERNAME[] = ""; 
+```
 
-## Instagram settings
+## Instagram, Threads and Pinterest
 
-You have only to enter your Instagram name in the field below: 
-String Instagram_userName = "YOUR_USERNAME";    
+To find out the follower counts for Instagram, Threads, and Pinterest, we use the Honeyhook service. This service also allows us to retrieve a wide range of other social media data from various providers without having to use each provider’s API. Honeyhook offers free access for up to 1,000 retrievals per month. (If you retrieve data for the three services only once every 6 hours, that comes to 558 retrievals per month.)
 
+First, enter your personal Honeyhook API key in the `credentials.h` file:
+```cpp
+// HonestHook API key, e.g. "hk_live_..."
+static const char HONESTHOOK_API_KEY[] = "";
+```
 
-## Google settings
+In addition, the usernames for the three social media channels must also be provided:
+```cpp
+// Public Instagram profile name, without @
+// Example: "hwhardsoft"
+static const char INSTAGRAM_USERNAME[] = "";
 
-Enter the Youtube API Key and Channel ID in the Youtube section: 
-#define API_KEY "YOUR_API_KEY"  // your google apps API Token 
-#define CHANNEL_ID "YOUR_CHANNEL_ID" // makes up the url of channel 
+// Public Threads profile name, without @
+static const char THREADS_USERNAME[] = "";
 
-It's necessary needed to create a Google Apps API key:
-• Create an application (https://console.developers.google.com 
-• On the API Manager section, go to "Credentials" and create a new API key 
-• Enable your application to communicate the YouTube Api (https://console.developers.google.com/apis/api/youtube) 
-• Make sure the following URL works for you in your browser (Change the key at the end!): https://www.googleapis.com/youtube/v3/channels? part=statistics&id=UCu7_D0o48KbfhpEohoP7YSQ&key=PutYourNewlyGeneratedKeyHere
- 
+// Public Pinterest profile name, without @
+static const char PINTEREST_USERNAME[] = "";
+``` 
 
 # License
 
