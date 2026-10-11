@@ -1,11 +1,11 @@
 # ESP32 based Follower Counter for AZ-Touch
 
 
-![My image](https://i.pinimg.com/564x/5d/10/40/5d1040267a2923ab269fd2b01193e2ec.jpg)
+![My image](https://github.com/HWHardsoft/ESP32-social-tracker-with-2.4inch-TFT/blob/master/graphics/AZ-Touch-Tiktok.jpg)
 
 ## Introduction
 
-This example for the AZ-Touch MOD(https://www.hwhardsoft.de/english/projects/arduitouch-esp/) or AZ-Touch Feather (e.g., with the Huzzah32 board) shows how to build a small social media follower counter using the AZ-Touch kits. Currently supported platforms include YouTube, TikTok, Threads, Instagram, and Pinterest. To make setup as easy as possible for the user, we have largely avoided using APIs. Instead, we extract the data for YouTube and TikTok by scraping the corresponding websites.
+This example for the [AZ-Touch MOD](https://www.hwhardsoft.de/english/projects/arduitouch-esp/) or AZ-Touch Feather (e.g., with the Huzzah32 board) shows how to build a small social media follower counter using the AZ-Touch kits. Currently supported platforms include YouTube, TikTok, Threads, Instagram, and Pinterest. To make setup as easy as possible for the user, we have largely avoided using APIs. Instead, we extract the data for YouTube and TikTok by scraping the corresponding websites.
 Instagram and Threads protect their pages against scraping, so we use Honesthook to access the data. 
 
 ## Hardware settings
