@@ -1,5 +1,5 @@
-# ESP32-social-tracker-with-2.4inch-TFT
-ESP32 social media tracker for Facebook, Instagram and Youtube for ArduiTouch ESP (with 2.4 inch touchscreen ILI9341)
+# ESP32 based Follower Counter for AZ-Touch
+
 
 ![My image](https://i.pinimg.com/564x/5d/10/40/5d1040267a2923ab269fd2b01193e2ec.jpg)
 
